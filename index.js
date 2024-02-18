@@ -95,8 +95,39 @@ let accountNetChange = 0;
 let previousAccountAmount = 0;
 let greatestAccountIncrease = Math.max(accountNetChange);
 let greatestAccountIncreaseMonths;
-let greatestAccountDecrease = Math.min(netChange);
+let greatestAccountDecrease = Math.min(accountNetChange);
 let greatestAccountDecreaseMonths;
 
-//Need to create for loops with if statements to sort through the array and get the required data.
 
+// Created for loops with if statements to filter through the array for the required data
+for (let i = 0; i < amountOfMonths; i++) {
+  let current = finances[i];
+  let currentDate = current[0];
+  let currentAmount = current[1];
+  accountTotal += currentAmount;
+
+  if (i > 0) {
+    previousAccountAmount = finances[i-1][1];
+    accountChange = currentAmount - previousAccountAmount;
+  }
+  accountNetChange += accountChange;
+  
+  if (accountChange > greatestAccountIncrease) {
+    greatestAccountIncrease = accountChange;
+    greatestAccountIncreaseMonths = finances [i+1][0];
+  }
+
+  if (accountChange < greatestAccountDecrease) {
+    greatestAccountDecrease = accountChange;
+    greatestAccountDecreaseMonths = finances [i+1][0];
+  }
+}
+
+let averageChange = accountNetChange / (amountOfMonths - 1);
+
+console.log (`Financial Analysis \n_ _ _ _ _ _ _ _ _ _ _`);
+console.log (`Total Months: ${amountOfMonths}`);
+console.log (`Total: $${accountTotal}`);
+console.log (`Average Change: ${averageChange.toFixed (2)}`);
+console.log(`Greatest Increase in Profits/Losses: ${greatestAccountIncreaseMonths} ($${greatestAccountIncrease})`);
+console.log(`Greatest Decrease in Profits/Losses: ${greatestAccountDecreaseMonths} ($${greatestAccountDecrease})`);
