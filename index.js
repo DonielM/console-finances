@@ -1,4 +1,5 @@
-var finances = [
+//Data set of each month with corresponding bank account balance.
+let finances = [
   ['Jan-2010', 867884],
   ['Feb-2010', 984655],
   ['Mar-2010', 322013],
@@ -86,3 +87,16 @@ var finances = [
   ['Jan-2017', 138230],
   ['Feb-2017', 671099],
 ];
+//Create variables for the amount of months, account total, account increases and decreases
+let amountOfMonths = finances.length;
+let accountTotal = 0;
+let accountChange = 0;
+let accountNetChange = 0;
+let previousAccountAmount = 0;
+let greatestAccountIncrease = Math.max(accountNetChange);
+let greatestAccountIncreaseMonths;
+let greatestAccountDecrease = Math.min(netChange);
+let greatestAccountDecreaseMonths;
+
+//Need to create for loops with if statements to sort through the array and get the required data.
+
