@@ -125,9 +125,20 @@ for (let i = 0; i < amountOfMonths; i++) {
 
 let averageChange = accountNetChange / (amountOfMonths - 1);
 
-console.log (`Financial Analysis \n_ _ _ _ _ _ _ _ _ _ _`);
-console.log (`Total Months: ${amountOfMonths}`);
-console.log (`Total: $${accountTotal}`);
-console.log (`Average Change: ${averageChange.toFixed (2)}`);
-console.log(`Greatest Increase in Profits/Losses: ${greatestAccountIncreaseMonths} ($${greatestAccountIncrease})`);
-console.log(`Greatest Decrease in Profits/Losses: ${greatestAccountDecreaseMonths} ($${greatestAccountDecrease})`);
+// console.log (`Financial Analysis \n_ _ _ _ _ _ _ _ _ _ _`);
+// console.log (`Total Months: ${amountOfMonths}`);
+// console.log (`Total: $${accountTotal}`);
+// console.log (`Average Change: ${averageChange.toFixed (2)}`);
+// console.log(`Greatest Increase in Profits/Losses: ${greatestAccountIncreaseMonths} ($${greatestAccountIncrease})`);
+// console.log(`Greatest Decrease in Profits/Losses: ${greatestAccountDecreaseMonths} ($${greatestAccountDecrease})`);
+let finacialAnalysis
+
+finacialAnalysis = 'Financial Analysis ' +`\n` + `for your account`+ '\n' + 
+'----------------' + '\n' + 
+'Total Months' +` = `+ amountOfMonths + '\n' + 
+'Total: $' + accountTotal + '\n' + 
+'Average Change: ' + averageChange.toFixed(2) + '\n' + 
+'Greatest Increase in Profits: ' + greatestAccountIncreaseMonths + ': $' + greatestAccountIncrease + '\n' + 
+'Greatest Decrease in Profits: ' + greatestAccountDecreaseMonths + ': $' + greatestAccountDecrease + '\n'
+
+console.log(finacialAnalysis);
