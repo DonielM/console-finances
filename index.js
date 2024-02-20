@@ -125,12 +125,7 @@ for (let i = 0; i < amountOfMonths; i++) {
 
 let averageChange = accountNetChange / (amountOfMonths - 1);
 
-// console.log (`Financial Analysis \n_ _ _ _ _ _ _ _ _ _ _`);
-// console.log (`Total Months: ${amountOfMonths}`);
-// console.log (`Total: $${accountTotal}`);
-// console.log (`Average Change: ${averageChange.toFixed (2)}`);
-// console.log(`Greatest Increase in Profits/Losses: ${greatestAccountIncreaseMonths} ($${greatestAccountIncrease})`);
-// console.log(`Greatest Decrease in Profits/Losses: ${greatestAccountDecreaseMonths} ($${greatestAccountDecrease})`);
+//Created finacial Analysis variable to concatenate all the console logs into one makes it easy to edit console in the future
 let finacialAnalysis
 
 finacialAnalysis = 'Financial Analysis ' +`\n` + `of your account`+ '\n' + 
