@@ -18,4 +18,8 @@ Display the data logged in console.
 ## Console screenshot
 ![Screenshot](./assets/images/console-screenshot.png)
 
+### Github Repo
+https://github.com/DonielM/console-finances
+### Deployed Application
+https://donielm.github.io/console-finances/
 
