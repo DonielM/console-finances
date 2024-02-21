@@ -1,10 +1,6 @@
 # Console-Finances
 This is a real-world application of JavaScript used for analysing the financial records of a company. I made use of  the provided data set to create variables and for loops with if statements to calculate the required balance information.
 
-
-
-
-
 ## Objective
 Use provided Finance Dataset - Arrays with two fields, Date and Profit/Losses.
 Write JavaScript code that analyses the dataset to calculate the following:
